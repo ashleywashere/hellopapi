@@ -1996,10 +1996,6 @@ do
 
         function drawing:Remove()
 
-            if rawget(drawing._object, '__OBJECT_EXISTS') then
-                self._object:Remove()
-            end
-
             if drawing._properties.Parent ~= nil then
                 drawing._properties.Parent._children[drawing] = nil
             end
